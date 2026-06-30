@@ -1,0 +1,14 @@
+/node_modules
+/.next
+/out
+/build
+.env*
+!.env.local.example
+*.log
+.DS_Store
+cv_temp.pdf
+
+# Kaynak/orijinal medya — gizlilik (public/ içine kopyalandı, repoya girmesin)
+/*.pdf
+/*.mp4
+/Ekran*.png

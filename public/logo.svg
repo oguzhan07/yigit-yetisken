@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter">
+  <!-- Duz Y -->
+  <path d="M4 4 L16 20 M28 4 L16 20 M16 20 L16 36" />
+  <!-- Ters Y -->
+  <path d="M48 4 L48 20 M36 36 L48 20 M60 36 L48 20" />
+</svg>

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Write-Output \"node: $\\(node -v 2>$null\\)\"; Write-Output \"npm: $\\(npm -v 2>$null\\)\"; Write-Output \"--- dir ---\"; Get-ChildItem -Force | Select-Object Name, Length | Format-Table -AutoSize)",
+      "PowerShell(npm install --no-fund --no-audit)",
+      "PowerShell(try { Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction Stop | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force; Write-Output \"Stopped PID $_\" } } catch { Write-Output \"No listener on 3000\" })",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(npm install @supabase/supabase-js @supabase/ssr resend --no-fund --no-audit)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/packages?select=slug,title,price_try&limit=5\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM\")",
+      "Bash(curl -s \"https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/packages?select=slug,title,price_try&limit=5\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM\")",
+      "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 60; Write-Output \"EXIT: $LASTEXITCODE\")",
+      "PowerShell(npm install -D pg --no-fund --no-audit)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/packages?select=slug&limit=1\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM\")",
+      "Bash(curl -s \"https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/packages?select=slug,title&limit=3\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM\")",
+      "Bash(curl -s 'https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/packages?select=slug,title,price_try,duration_months&order=sort_order' -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM')",
+      "Bash(curl -s https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/legal_pages?select=slug,title -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM')",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/faqs?select=id -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDM4MTEsImV4cCI6MjA5Nzk3OTgxMX0.RcA3js7jotEGkLa-cRf7dLF5B3sCnnM697o6RhNuXJM')",
+      "PowerShell(node --env-file=.env.local scripts/seed-admin.mjs)",
+      "PowerShell(node --env-file=.env.local scripts/verify.mjs)",
+      "PowerShell(node --env-file=.env.local scripts/seed-testuser.mjs)",
+      "PowerShell(node --env-file=.env.local scripts/verify-testuser.mjs)",
+      "Bash(curl -s 'https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/progress_entries?user_id=eq.a7a7580c-dffe-4928-be06-533162a2b351&select=id,weight_kg' -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjQwMzgxMSwiZXhwIjoyMDk3OTc5ODExfQ.VSosTid_3MGCYSt9aRIbBz8BTRdXkTZ311mv9hy8FD8' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjQwMzgxMSwiZXhwIjoyMDk3OTc5ODExfQ.VSosTid_3MGCYSt9aRIbBz8BTRdXkTZ311mv9hy8FD8')",
+      "Bash(curl -s -w '\\\\nHTTP %{http_code}\\\\n' -X POST https://nujnceskmayhexrkcqkb.supabase.co/rest/v1/progress_entries -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjQwMzgxMSwiZXhwIjoyMDk3OTc5ODExfQ.VSosTid_3MGCYSt9aRIbBz8BTRdXkTZ311mv9hy8FD8' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51am5jZXNrbWF5aGV4cmtjcWtiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjQwMzgxMSwiZXhwIjoyMDk3OTc5ODExfQ.VSosTid_3MGCYSt9aRIbBz8BTRdXkTZ311mv9hy8FD8' -H 'Content-Type: application/json' -H 'Prefer: return=representation' -d '{\"user_id\":\"a7a7580c-dffe-4928-be06-533162a2b351\",\"entry_date\":\"2026-05-01\",\"weight_kg\":85}')",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} -> %{redirect_url}\\\\n\" --max-time 60 \"http://localhost:3000/admin\")",
+      "Bash(curl -s '__TRACKED_VAR__/profiles?id=eq.67a989fa-893d-48aa-b2bc-8644ff7791c7&select=full_name,role' -H 'apikey: __TRACKED_VAR__' -H 'Authorization: Bearer __TRACKED_VAR__')",
+      "PowerShell(node --env-file=.env.local scripts/list-users.mjs)",
+      "PowerShell(node --env-file=.env.local scripts/sync-profiles.mjs)",
+      "WebSearch",
+      "PowerShell(npm install iyzipay --no-fund --no-audit)",
+      "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 40; Write-Output \"EXIT: $LASTEXITCODE\")",
+      "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 40; Write-Output \"TSC EXIT: $LASTEXITCODE\")",
+      "PowerShell(node --env-file=.env.local scripts/test-iyzico.mjs)",
+      "PowerShell(npm run build 2>&1)"
+    ]
+  }
+}
